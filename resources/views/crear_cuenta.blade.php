@@ -57,7 +57,7 @@
     <div class="tm-main-section light-gray-bg">
       <div class="container" id="main">
         <h2 class="col-lg-12 margin-bottom-30">Crear una cuenta</h2>
-        <form class="tm-contact-form" name="user" action="{{ route('login') }}" method="POST">
+        <form class="tm-contact-form" name="user" action="{{ route('create_user') }}" method="POST">
           @csrf
          
           <div class="col-lg-6 col-md-6">

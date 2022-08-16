@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+
 use FontLib\Table\Type\name;
 use Illuminate\Support\Facades\Route;
 
@@ -12,6 +14,7 @@ Route::get('/', [HomeController::class,"index"])->name('index_home');
 Route::get('/contacto', [HomeController::class,"contacto"])->name('contacto');
 Route::get('/menu', [HomeController::class,"menu"])->name('menu');
 Route::get('/crear_cuenta', [HomeController::class,"crear_cuenta"])->name('crear_cuenta');
+Route::post('/create_user', [RegisterController::class,"create_user"])->name('create_user');
 
 
 
