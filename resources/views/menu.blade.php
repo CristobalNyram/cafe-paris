@@ -11,7 +11,7 @@
   <link href="css/app/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/app/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/app/css/templatemo-style.css" rel="stylesheet">
-  <link rel="shortcut icon" href="css/app/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/app/img/favicon.ico" type="image/x-icon" />
 
   </head>
   <body>
@@ -28,11 +28,11 @@
             </div>
             <nav class="tm-nav">
               <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="menu.html" class="active">Menu</a></li>
-                <li><a href="Secion.html">Inicio de secion</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="signup.html">Iniciar sesion</a></li>
+                <li><a href="{{route('index_home')}}" >Inicio</a></li>
+                <li><a href="{{route('menu')}}" class="active" >Menu</a></li>
+                <li><a href="{{route('index_login')}}">inicio de sesión</a></li>
+                <li><a href="{{route('contacto')}}" >Contacto</a></li>
+                <li><a href="{{route('index_login')}}" >crear una cuenta</a></li>
               </ul>
             </nav>   
           </div>           
@@ -65,7 +65,7 @@
           </div>          
             <div class="tm-menu-product-content col-lg-9 col-md-9"> 
               <div class="tm-product">
-                <img src="images/app/img/menu-1.pg" alt="Product">
+                <img src="images/app/img/menu-1.jpg" alt="Product">
                 <div class="tm-product-text">
                   <h3 class="tm-product-title">Café Americano </h3>
                   <p class="tm-product-description">El café americano, refiriéndose al café típico que se bebe en los Estados Unidos, es la mezcla de agua caliente y café procesado en una cafetera con filtro de café.</p>
@@ -75,7 +75,7 @@
                 </div>
               </div>
               <div class="tm-product">
-                <img src="images/app/img/menu-2.pg" alt="Product">
+                <img src="images/app/img/menu-2.jpg" alt="Product">
                 <div class="tm-product-text">
                   <h3 class="tm-product-title">Café Capuchino</h3>
                   <p class="tm-product-description">Esta preparada con café expreso y leche montada con vapor para darle cremosidad. Un capuchino se compone de 125 ml de leche y 25 ml de café expreso.</p>
@@ -85,7 +85,7 @@
                 </div>
               </div>
               <div class="tm-product">
-                <img src="images/app/img/menu-3.pg" alt="Product">
+                <img src="images/app/img/menu-3.jpg" alt="Product">
                 <div class="tm-product-text">
                   <h3 class="tm-product-title">Café Moca</h3>
                   <p class="tm-product-description">El café mocasuele llevar un tercio de expreso y dos tercios de leche vaporizada, pero se añade una parte de chocolate, normalmente en forma de jarabe de chocolate.</p>
@@ -95,7 +95,7 @@
                 </div>
               </div>
               <div class="tm-product">
-                <img src="images/app/img/menu-4.pg" alt="Product">
+                <img src="images/app/img/menu-4.jpg" alt="Product">
                 <div class="tm-product-text">
                   <h3 class="tm-product-title">Café Expreso</h3>
                   <p class="tm-product-description">Debe su término a la obtención de esta bebida a través de una cafetera expreso.​ Se caracteriza por su rápida preparación a una alta presión y por un sabor y textura más concentrados.</p>
@@ -109,7 +109,7 @@
                 <div class="tm-hr-container"><hr class="tm-hr"></div>
               </div>    
               <div class="tm-product">
-                <img src="img/menu-5.pg" alt="Product">
+                <img src="images/app/img/menu-5.jpg" alt="Product">
                 <div class="tm-product-text">
                   <h3 class="tm-product-title">Pastel De chocolate</h3>
                   <p class="tm-product-description">El pastel de chocolate, tarta de chocolate o torta de chocolate, es un postre conocido internacionalmente.</p>
@@ -119,7 +119,7 @@
                 </div>
               </div>
                 <div class="tm-product">
-                  <img src="images/app/img/menu-4.pg" alt="Product">
+                  <img src="images/app/img/menu-4.jpg" alt="Product">
                   <div class="tm-product-text">
                     <h3 class="tm-product-title">Pay De Limon</h3>
                     <p class="tm-product-description">Hecho con una corteza de masa quebrada, relleno de crema de limón y un esponjoso merengue en la parte superior.</p>
@@ -129,7 +129,7 @@
                   </div>
                 </div>
                 <div class="tm-product">
-                  <img src="images/app/img/menu-4.pg" alt="Product">
+                  <img src="images/app/img/menu-4.jpg" alt="Product">
                   <div class="tm-product-text">
                     <h3 class="tm-product-title">Galleta De Coco</h3>
                     <p class="tm-product-description">Galletas de coco caseras, con una textura suave y un potente sabor inconfundible a coco.</p>

@@ -1,49 +1,62 @@
-@extends('layouts.login')
-@section('title',"Login - DVTECAM")
-
-@section('content')
-  <header class="header-login">
-  	<center>
-   
-    </center>
-  </header>
-
-<section class="login p-fixed d-flex text-center">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="login-card card-block">
-					<form class="md-float-material" name="user" action="{{ route('login') }}" method="POST">
-						@csrf
-						<h2 class="text-center text-uppercase">
-							Ingreso al personal de la institución
-						</h2>
-						@error('user')
-							<div class="alert alert-danger">{{ $message }}</div>
-						@enderror
-						<div class="row">
-							<div class="col-md-12">
-								<div class="md-input-wrapper">
-									<input type="text" class="md-form-control" name="user" value="{{ old('user') }}" required="required"/>
-									<label>Usuario</label>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="md-input-wrapper">
-									<input type="password" class="md-form-control" name="password" required="required"/>
-									<label>Contraseña</label>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-10 offset-xs-1">
-								<button type="submit" class="btn button-custom btn-md btn-block waves-effect text-center m-b-20">INGRESAR</button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-@endsection
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/app/css/estilos.css">
+    <link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+    <link href="css/app/css/templatemo-style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="tm-top-header">
+        <div class="container">
+          <div class="row">
+            <div class="tm-top-header-inner">
+              <div class="tm-logo-container">
+                <img src="images/app/img/logo.png" alt="Logo" class="tm-site-logo">
+                <h1 class="tm-site-name tm-handwriting-font">Café Paris</h1>
+              </div>
+              <div class="mobile-menu-icon">
+                <i class="fa fa-bars"></i>
+              </div>
+              <nav class="tm-nav">
+                <ul>
+					<li><a href="{{route('index_home')}}" >Inicio</a></li>
+					<li><a href="{{route('menu')}}" >Menu</a></li>
+					<li><a href="{{route('index_login')}}" class="active">inicio de sesión</a></li>
+					<li><a href="{{route('contacto')}}" >Contacto</a></li>
+					<li><a href="{{route('index_login')}}" >crear una cuenta</a></li>
+                </ul>
+              </nav>   
+            </div>           
+          </div>    
+        </div>
+      </div>
+    <section class="form-main">
+        <div class="form-content">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+            <div class="circle-3"></div>
+            <div class="box">
+                <h3>Bienvenido</h3>
+                <form action="">
+                    <div class="input-box">
+                        <input type="text" placeholder="Email" class="Input-controler">
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="password" class="Input-controler">
+                        <div class="input-link">
+                            <a href="recuperar.html" class="gradient-text">Has olvidado tu contraseña</a>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Iniciar Sesion</button>
+                </form>
+                <p>No tienes una cuenta? <a href="signup.html" class="gradient-text">Crear cuenta</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
