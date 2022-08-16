@@ -18,6 +18,10 @@ class HomeController extends Controller
     {
         return view('contacto');
     }
+    public function menu()
+    {
+        return view('menu');
+    }
 
 
     /**

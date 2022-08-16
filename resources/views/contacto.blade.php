@@ -5,13 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cafe paris</title>
-
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/templatemo-style.css" rel="stylesheet">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <link href="css/app/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/app/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/app/css/templatemo-style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="images/app/img/favicon.ico" type="image/x-icon" />
 
   </head>
   <body>
@@ -20,7 +19,7 @@
         <div class="row">
           <div class="tm-top-header-inner">
             <div class="tm-logo-container">
-              <img src="img/logo.png" alt="Logo" class="tm-site-logo">
+              <img src="images/app/img/logo.png" alt="Logo" class="tm-site-logo">
               <h1 class="tm-site-name tm-handwriting-font">Café Paris</h1>
             </div>
             <div class="mobile-menu-icon">
@@ -42,16 +41,16 @@
     <section class="tm-welcome-section">
       <div class="container tm-position-relative">
         <div class="tm-lights-container">
-          <img src="img/light.png" alt="Light" class="light light-1">
-          <img src="img/light.png" alt="Light" class="light light-2">
-          <img src="img/light.png" alt="Light" class="light light-3">  
+          <img src="images/app/imgs/light.png" alt="Light" class="light light-1">
+          <img src="images/app/img/light.png" alt="Light" class="light light-2">
+          <img src="images/app/img/light.png" alt="Light" class="light light-3">  
         </div>        
         <div class="row tm-welcome-content">
-          <h2 class="white-text tm-handwriting-font tm-welcome-header"><img src="img/header-line.png" alt="Line" class="tm-header-line">&nbsp;Contacto&nbsp;&nbsp;<img src="img/header-line.png" alt="Line" class="tm-header-line"></h2>
+          <h2 class="white-text tm-handwriting-font tm-welcome-header"><img src="images/app/img/header-line.png" alt="Line" class="tm-header-line">&nbsp;Contacto&nbsp;&nbsp;<img src="images/app/img/header-line.png" alt="Line" class="tm-header-line"></h2>
           <h2 class="gold-text tm-welcome-header-2">Café Paris</h2>
           <p class="gray-text tm-welcome-description">Café Paris ofrece los mejores <span class="gold-text">Café, postres y snaks</span> de <span class="gold-text">tecamachalco</span>. Ofrecemos el mejor Café para que lo disfrutes en tus tiempos libres y te desconectes del mundo por un momento.</p>   
           </div>
-        <img src="img/table-set.png" alt="Table Set" class="tm-table-set img-responsive">            
+        <img src="images/app/img/table-set.png" alt="Table Set" class="tm-table-set img-responsive">            
       </div>      
     </section>
     <div class="tm-main-section light-gray-bg">

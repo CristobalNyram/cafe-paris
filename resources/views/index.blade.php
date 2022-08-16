@@ -28,11 +28,11 @@
             </div>
             <nav class="tm-nav">
               <ul>
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="Secion.html">Inicio de secion</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="signup.html">Iniciar sesion</a></li>
+                <li><a href="{{route('index_home')}}" class="active">Inicio</a></li>
+                <li><a href="{{route('menu')}}" >Menu</a></li>
+                <li><a href="{{route('index_login')}}">inicio de sesión</a></li>
+                <li><a href="{{route('contacto')}}" >Contacto</a></li>
+                <li><a href="{{route('index_login')}}" >crear una cuenta</a></li>
               </ul>
             </nav>   
           </div>           

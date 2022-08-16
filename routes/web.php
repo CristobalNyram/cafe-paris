@@ -8,12 +8,16 @@ use App\Http\Controllers\Auth\LoginController;
 use FontLib\Table\Type\name;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class,"index"]);
+Route::get('/', [HomeController::class,"index"])->name('index_home');
+Route::get('/contacto', [HomeController::class,"contacto"])->name('contacto');
+Route::get('/menu', [HomeController::class,"menu"])->name('menu');
+
 
 
 #rutas para el apartado de login
 Route::prefix('admin')->group(function () {
     Route::get('/', [LoginController::class,"show_login"])->middleware('guest')->name('index_login');
+    
 
     Route::get('/dashboard', [AdminController::class,"dashboard"])->middleware('auth')->name('dashboard');
     Route::get('/reportes', [AdminController::class,"report_excel"])->middleware('auth')->name('report_excel');
