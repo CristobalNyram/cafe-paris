@@ -14,11 +14,11 @@ https://mycolor.space/?hex=%231D3DE8&sub=1
     color: white;
 }
 h4 {
-    color: #1D3DE8;
+    color: #2F4858;
 }
 
 h2 {
-    color: #1D3DE8;
+    color: #347469;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -47,7 +47,7 @@ h2 {
 }
 
 .main-header-top {
-    background-image: linear-gradient(to right, #006cff, #0086fe, #0097ed, #00a3d5, #00acbe);
+    background-image: linear-gradient(to right, #438843, #31834d, #1f7e55, #0d785c, #007261);
 
 }
 
@@ -55,7 +55,7 @@ h2 {
     padding: 10px 0 !important;
     font-weight: 500;
     font-size: 13px;
-    color: rgb(12, 52, 255);
+    color:#007E4F;
     border-top: 1px solid #efefef;
     position: relative;
 }
@@ -109,7 +109,7 @@ h2 {
 .main-header-top .navbar .top-nav .open > a:hover,
 .main-header-top .navbar .top-nav .open > a:focus {
     opacity: 1;
-    color: #1D3DE8;
+    color: #007261;
 }
 .main-header-top .navbar .top-nav > .active > a {
     background: rgba(0, 0, 0, 0.1);
@@ -143,7 +143,7 @@ h2 {
     color: #666;
 }
 .sidebar-menu > li.active > a {
-    color: #009CEF;
+    color: #007261;
     font-weight: 600;
     border-right: 0.4em solid #00B987;
 }
@@ -289,8 +289,7 @@ header .wrapper {
     border-radius: 0;
     padding: 0;
     background: rgb(0, 76, 168);
-    background-image: linear-gradient(to right, #006cff, #0086fe, #0097ed, #00a3d5, #00acbe);
-
+    background-image: linear-gradient(to right, #438843, #31834d, #1f7e55, #0d785c, #007261);
 }
 .main-header-top .sidebar-toggle {
     float: left;

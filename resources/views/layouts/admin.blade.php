@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   <title>Dashboard - DVTECAM</title>
+   <title>Dashboard - CAFE PARIS</title>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
    <link rel="stylesheet" type="text/css" href="/css/responsive.css">
    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-   <link rel="icon" type="image/png" href="https://iconape.com/wp-content/files/ck/194634/png/194634.png" />
+   <link rel="shortcut icon" href="../images/app/img/favicon.ico" type="image/x-icon" />
 
 </head>
 <body class="sidebar-mini fixed">
@@ -66,25 +66,22 @@
                 <li class="nav-level">--- Usuarios</li>
                 <li class="treeview @if($menu === 'report_excel') active @endif">
                     <a class="waves-effect waves-dark" href="{{ route('report_excel')}}">
-                        <i class="ti-user"></i><span>Perfiles</span>
+                        <i class="ti-user"></i><span>Usuarios</span>
                     </a>                
                 </li>
 
                 <li class="nav-level">--- Administración</li>
                 <li class="treeview @if($menu === 'report_online') active @endif">
                     <a class="waves-effect waves-dark" >
-                        <i class="ti-money"></i><span>Pagos</span>
+                        <i class="ti-shopping-cart"></i><span>Pedidos</span>
                     </a>                
                 </li>
                 <li class="treeview @if($menu === 'registration_users') active @endif">
                   <a class="waves-effect waves-dark" href="{{ route('registration_users')}}">
-                      <i class="ti-layout-menu-v"></i><span>Registros</span>
+                      <i class="ti-archive"></i><span>Productos</span>
                   </a>                
               </li>
-              <li class="treeview @if($menu === 'news') active @endif">
-               <a class="waves-effect waves-dark" href="{{ route('news_index')}}">
-                   <i class="ti-id-badge"></i><span>Noticias</span>
-               </a>                
+           
            </li>
             </ul>
          </section>
