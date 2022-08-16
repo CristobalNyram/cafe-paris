@@ -1,0 +1,12 @@
+.btn-coffee{
+    background-color: #c79c60;
+    color: white;
+
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    transition: .5s;
+}
+.btn-coffee:active{
+    padding:1.5rem;
+}

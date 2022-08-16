@@ -41,7 +41,7 @@
     <section class="tm-welcome-section">
       <div class="container tm-position-relative">
         <div class="tm-lights-container">
-          <img src="images/app/imgs/light.png" alt="Light" class="light light-1">
+          <img src="images/app/img/light.png" alt="Light" class="light light-1">
           <img src="images/app/img/light.png" alt="Light" class="light light-2">
           <img src="images/app/img/light.png" alt="Light" class="light light-3">  
         </div>        

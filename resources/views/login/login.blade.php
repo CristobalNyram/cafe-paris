@@ -10,8 +10,11 @@
   <link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
   <link href="css/app/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/app/css/font-awesome.min.css" rel="stylesheet">
+
   <link href="css/app/css/templatemo-style.css" rel="stylesheet">
   <link rel="shortcut icon" href="images/app/img/favicon.ico" type="image/x-icon" />
+  <link href="css/app/css/custom.css" rel="stylesheet">
+
 
   </head>
   <body>
@@ -32,7 +35,7 @@
                 <li><a href="{{route('menu')}}" >Menu</a></li>
                 <li><a href="{{route('index_login')}}" class="active">inicio de sesión</a></li>
                 <li><a href="{{route('contacto')}}" >Contacto</a></li>
-                <li><a href="{{route('index_login')}}" >crear una cuenta</a></li>
+                <li><a href="{{route('crear_cuenta')}}">crear una cuenta</a></li>
               </ul>
             </nav>   
           </div>           
@@ -55,6 +58,27 @@
     </section>
     <div class="tm-main-section light-gray-bg">
       <div class="container" id="main">
+        <section class="tm-section row">
+          <h2 class="col-lg-12 margin-bottom-30">Inciar sesión</h2>
+          <form class="tm-contact-form" name="user" action="{{ route('login') }}" method="POST">
+            @csrf
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <input type="text" name="user" value="{{ old('user') }}" required="required" class="form-control" placeholder="Nombre de usuario" />
+              </div>
+              <div class="form-group">
+                <input type="password"  name="password" required="required" class="form-control" placeholder="contraseña" />
+              </div>
+             
+        
+              <div class="form-group">
+                <button class="btn-coffee" type="submit" name="submit">Ingresar</button> 
+              </div>               
+            </div>
+
+          </form>
+        </section>
+      </div>
     
         <section class="tm-section">
           <div class="row">         
