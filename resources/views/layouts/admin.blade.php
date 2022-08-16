@@ -29,7 +29,7 @@
    <div class="wrapper">
       <!-- Navbar-->
       <header class="main-header-top hidden-print">
-         <a href="index.html" class="logo"><img class="img-fluid able-logo" width="" src="" alt="Logo"></a>
+         <a href="index.html" class="logo"><img class=""  width="60px" height="50px" src="https://images.vexels.com/media/users/3/127952/isolated/preview/70cd0eb5945d8d905fac9a9d8f8ba9e2-icono-de-taza-de-cafe-dibujado-a-mano.png" alt="Logo"></a>
          <nav class="navbar navbar-static-top">
             <!-- Sidebar toggle button-->
             <a href="#!" data-toggle="offcanvas" class="sidebar-toggle"></a>

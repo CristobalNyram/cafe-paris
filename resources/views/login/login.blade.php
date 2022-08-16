@@ -59,9 +59,18 @@
     <div class="tm-main-section light-gray-bg">
       <div class="container" id="main">
         <section class="tm-section row">
+          @error('user')
+          <div class="col-lg-12">
+            <div class="form-group">
+           <center>   <div class="alert alert-danger">{{ $message }}</div>
+           </center>
+            </div>
+          </div>
+        @enderror
           <h2 class="col-lg-12 margin-bottom-30">Inciar sesión</h2>
           <form class="tm-contact-form" name="user" action="{{ route('login') }}" method="POST">
             @csrf
+           
             <div class="col-lg-6 col-md-6">
               <div class="form-group">
                 <input type="text" name="user" value="{{ old('user') }}" required="required" class="form-control" placeholder="Nombre de usuario" />

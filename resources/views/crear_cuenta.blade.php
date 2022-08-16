@@ -12,6 +12,7 @@
   <link href="css/app/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/app/css/templatemo-style.css" rel="stylesheet">
   <link rel="shortcut icon" href="images/app/img/favicon.ico" type="image/x-icon" />
+  <link href="css/app/css/custom.css" rel="stylesheet">
 
   </head>
   <body>
@@ -55,7 +56,38 @@
     </section>
     <div class="tm-main-section light-gray-bg">
       <div class="container" id="main">
-    
+        <h2 class="col-lg-12 margin-bottom-30">Crear una cuenta</h2>
+        <form class="tm-contact-form" name="user" action="{{ route('login') }}" method="POST">
+          @csrf
+         
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group">
+              <input type="text" name="user" value="{{ old('user') }}" required="required" class="form-control" placeholder="Nick name" />
+            </div>
+            <div class="form-group">
+              <input type="text" name="name" value="{{ old('user') }}" required="required" class="form-control" placeholder="Nombre" />
+            </div>
+            <div class="form-group">
+              <input type="text" name="first_surname" value="{{ old('first_surname') }}" required="required" class="form-control" placeholder="Apellido paterno" />
+            </div>
+            <div class="form-group">
+              <input type="text" name="secondo_surname" value="{{ old('secondo_surname') }}" required="required" class="form-control" placeholder="Apellido paterno" />
+            </div>
+            <div class="form-group">
+              <input type="text" name="email" value="{{ old('email') }}" required="required" class="form-control" placeholder="Correo electronico" />
+            </div>
+
+            <div class="form-group">
+              <input type="password"  name="password" required="required" class="form-control" placeholder="Contraseña" />
+            </div>
+           
+      
+            <div class="form-group">
+              <button class="btn-coffee" type="submit" name="submit">Registrarme</button> 
+            </div>               
+          </div>
+
+        </form>
         <section class="tm-section">
           <div class="row">         
         </section>
@@ -90,8 +122,8 @@
      </div>
    </footer> 
    
-   <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      
-   <script type="text/javascript" src="js/templatemo-script.js"></script>      
+   <script type="text/javascript" src="js/app/js/jquery-1.11.2.min.js"></script>      
+   <script type="text/javascript" src="js/app/js/templatemo-script.js"></script>      
 
  </body>
  </html>
