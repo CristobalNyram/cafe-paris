@@ -22,6 +22,10 @@ class HomeController extends Controller
     {
         return view('menu');
     }
+    public function crear_cuenta()
+    {
+        return view('crear_cuenta');
+    }
 
 
     /**

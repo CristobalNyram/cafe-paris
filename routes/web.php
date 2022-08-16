@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class,"index"])->name('index_home');
 Route::get('/contacto', [HomeController::class,"contacto"])->name('contacto');
 Route::get('/menu', [HomeController::class,"menu"])->name('menu');
+Route::get('/crear_cuenta', [HomeController::class,"crear_cuenta"])->name('crear_cuenta');
 
 
 

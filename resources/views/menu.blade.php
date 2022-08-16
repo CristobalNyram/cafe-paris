@@ -32,7 +32,7 @@
                 <li><a href="{{route('menu')}}" class="active" >Menu</a></li>
                 <li><a href="{{route('index_login')}}">inicio de sesión</a></li>
                 <li><a href="{{route('contacto')}}" >Contacto</a></li>
-                <li><a href="{{route('index_login')}}" >crear una cuenta</a></li>
+                <li><a href="{{route('crear_cuenta')}}"  >crear una cuenta</a></li>
               </ul>
             </nav>   
           </div>           
