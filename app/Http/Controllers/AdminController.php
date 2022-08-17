@@ -8,6 +8,8 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\EncuestaExport;
 use App\Exports\HistoryAlumno;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
+use App\Http\Controllers\Users;
 
 class AdminController extends Controller
 {
@@ -35,25 +37,25 @@ class AdminController extends Controller
     }
     public function registration_users()
     {
-      
+
          $variables = [
-            'menu'=>"registration_users",        
+            'menu'=>"registration_users",
         ];
         return view('admin.registration_users')->with($variables);
     }
 
     public function news()
     {
-      
+
          $variables = [
-            'menu'=>"news",        
+            'menu'=>"news",
         ];
         return view('news.index')->with($variables);
     }
 
 
 
- 
+
 
     /**
      * Show the form for creating a new resource.
@@ -119,5 +121,16 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function users_index()
+    {
+        $users =User::latest()->where('status','2')->get();
+
+        $variables = [
+            'menu'=>"users_index",
+            'users'=>$users,
+        ];
+        return view('admin.users_index')->with($variables);
     }
 }

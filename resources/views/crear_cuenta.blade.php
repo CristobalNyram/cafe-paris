@@ -35,9 +35,9 @@
                 <li><a href="{{route('contacto')}}" >Contacto</a></li>
                 <li><a href="{{route('crear_cuenta')}}" class="active">crear una cuenta</a></li>
               </ul>
-            </nav>   
-          </div>           
-        </div>    
+            </nav>
+          </div>
+        </div>
       </div>
     </div>
     <section class="tm-welcome-section">
@@ -45,33 +45,52 @@
         <div class="tm-lights-container">
           <img src="images/app/img/light.png" alt="Light" class="light light-1">
           <img src="images/app/img/light.png" alt="Light" class="light light-2">
-          <img src="images/app/img/light.png" alt="Light" class="light light-3">  
-        </div>        
+          <img src="images/app/img/light.png" alt="Light" class="light light-3">
+        </div>
         <div class="row tm-welcome-content">
           <h2 class="white-text tm-handwriting-font tm-welcome-header"><img src="images/app/img/header-line.png" alt="Line" class="tm-header-line">Inicia sesión<img src="images/app/img/header-line.png" alt="Line" class="tm-header-line"></h2>
           <h2 class="gold-text tm-welcome-header-2">Café Paris</h2>
         </div>
-        <img src="images/app/img/table-set.png" alt="Table Set" class="tm-table-set img-responsive">             
-      </div>      
+        <img src="images/app/img/table-set.png" alt="Table Set" class="tm-table-set img-responsive">
+      </div>
     </section>
     <div class="tm-main-section light-gray-bg">
+
+
       <div class="container" id="main">
+
+
         <h2 class="col-lg-12 margin-bottom-30">Crear una cuenta</h2>
         <form class="tm-contact-form" name="user" action="{{ route('create_user') }}" method="POST">
           @csrf
-         
+                @if($errors->any())
+                <div class="col-lg-12">
+                    <div class="form-group">
+                   <center>   <div class="alert alert-danger mt-2">Error en los campos: nick name repetido o el correo que usas ya está  registrado.</div>
+                   </center>
+                    </div>
+                  </div>
+                @endif
+                @if(session('success'))
+                <div class="col-lg-12">
+                    <div class="form-group">
+                   <center>   <div class="alert alert-success mt-2">{{ session('success') }}.</div>
+                   </center>
+                    </div>
+                  </div>
+                @endif
           <div class="col-lg-6 col-md-6">
             <div class="form-group">
-              <input type="text" name="user" value="{{ old('user') }}" required="required" class="form-control" placeholder="Nick name" />
+              <input type="text" name="user" p value="{{ old('user') }}" required="required" class="form-control" placeholder="Nick name" />
             </div>
             <div class="form-group">
               <input type="text" name="name" value="{{ old('user') }}" required="required" class="form-control" placeholder="Nombre" />
             </div>
             <div class="form-group">
-              <input type="text" name="first_surname" value="{{ old('first_surname') }}" required="required" class="form-control" placeholder="Apellido paterno" />
+              <input type="text" name="first_surname"  value="{{ old('first_surname') }}" required="required" class="form-control" placeholder="Apellido paterno" />
             </div>
             <div class="form-group">
-              <input type="text" name="secondo_surname" value="{{ old('secondo_surname') }}" required="required" class="form-control" placeholder="Apellido paterno" />
+              <input type="text" name="second_surname"  value="{{ old('secondo_surname') }}" required="required" class="form-control" placeholder="Apellido paterno" />
             </div>
             <div class="form-group">
               <input type="text" name="email" value="{{ old('email') }}" required="required" class="form-control" placeholder="Correo electronico" />
@@ -80,19 +99,19 @@
             <div class="form-group">
               <input type="password"  name="password" required="required" class="form-control" placeholder="Contraseña" />
             </div>
-           
-      
+
+
             <div class="form-group">
-              <button class="btn-coffee" type="submit" name="submit">Registrarme</button> 
-            </div>               
+              <button class="btn-coffee" type="submit" name="submit">Registrarme</button>
+            </div>
           </div>
 
         </form>
         <section class="tm-section">
-          <div class="row">         
+          <div class="row">
         </section>
       </div>
-    </div> 
+    </div>
     <footer>
       <div class="tm-black-bg">
         <div class="container">
@@ -110,20 +129,20 @@
                 <a href="#" class="tm-social-icon"><i class="fa fa-whatsapp"></i></a>
               </div>
             </div>
-          </div>          
-        </div>  
-      </div>      
+          </div>
+        </div>
+      </div>
       <div>
         <div class="container">
           <div class="row tm-copyright">
            <p class="col-lg-12 small copyright-text text-center"> &copy; Café Paris</p>
-         </div>  
+         </div>
        </div>
      </div>
-   </footer> 
-   
-   <script type="text/javascript" src="js/app/js/jquery-1.11.2.min.js"></script>      
-   <script type="text/javascript" src="js/app/js/templatemo-script.js"></script>      
+   </footer>
+
+   <script type="text/javascript" src="js/app/js/jquery-1.11.2.min.js"></script>
+   <script type="text/javascript" src="js/app/js/templatemo-script.js"></script>
 
  </body>
  </html>

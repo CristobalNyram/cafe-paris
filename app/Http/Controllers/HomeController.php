@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Models\User;
+
+
 class HomeController extends Controller
 {
     /**
@@ -26,6 +32,35 @@ class HomeController extends Controller
     {
         return view('crear_cuenta');
     }
+    public function create_user(Request $request)
+    {
+       $validate = $request->validate(
+        [
+        'email'=>'required|email|unique:users',
+        'user'=>'required|unique:users',
+        ]);
+
+
+
+        $user = new User();
+            $user->name= $request->name;
+            $user->first_surname =$request->first_surname;
+            $user->second_surname =$request->second_surname;
+            $user->user =$request->user;
+            $user->email =$request->email;
+            $user->password =Hash::make($request->password);
+            $user->status =2;
+            $user->type_user = 2;
+
+            if($user->save())
+            {
+                return back()->with('success','Te has registrado exitosamente, ya puedes inciar sesión');
+
+            }
+
+    }
+
+
 
 
     /**
@@ -46,7 +81,7 @@ class HomeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**

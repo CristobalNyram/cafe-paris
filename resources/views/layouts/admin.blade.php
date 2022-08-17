@@ -61,27 +61,27 @@
                 <li class="reeview @if($menu === 'dashboard') active @endif">
                     <a class="waves-effect waves-dark" href="{{ route('dashboard') }}">
                         <i class="ti-dashboard"></i><span> Dashboard</span>
-                    </a>                
+                    </a>
                 </li>
                 <li class="nav-level">--- Usuarios</li>
-                <li class="treeview @if($menu === 'report_excel') active @endif">
-                    <a class="waves-effect waves-dark" href="{{ route('report_excel')}}">
+                <li class="treeview @if($menu === 'users_index') active @endif">
+                    <a class="waves-effect waves-dark" href="{{ route('users_index')}}">
                         <i class="ti-user"></i><span>Usuarios</span>
-                    </a>                
+                    </a>
                 </li>
 
                 <li class="nav-level">--- Administración</li>
                 <li class="treeview @if($menu === 'report_online') active @endif">
                     <a class="waves-effect waves-dark" >
                         <i class="ti-shopping-cart"></i><span>Pedidos</span>
-                    </a>                
+                    </a>
                 </li>
-                <li class="treeview @if($menu === 'registration_users') active @endif">
-                  <a class="waves-effect waves-dark" href="{{ route('registration_users')}}">
+                <li class="treeview @if($menu === 'products_index') active @endif">
+                  <a class="waves-effect waves-dark" href="{{ route('product_index')}}">
                       <i class="ti-archive"></i><span>Productos</span>
-                  </a>                
+                  </a>
               </li>
-           
+
            </li>
             </ul>
          </section>
