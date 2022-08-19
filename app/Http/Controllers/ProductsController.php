@@ -46,7 +46,25 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product= new Products();
+        $product->name=$request->name;
+        $product->description=$request->description;
+        $product->image_url='prueba';
+        $product->category=$request->category;
+
+        $product->price=$request->price;
+        $product->status='2';
+
+        if($product->save()===true)
+        {
+          return back()->with('success','Se ha agregado exitosamente el producto.');
+
+        }
+        else
+        {
+           return back()->with('error','No se pudo agregar el producto.');
+
+        }
     }
 
     /**
@@ -89,8 +107,17 @@ class ProductsController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Products $product)
     {
-        //
+
+        $product->status='-2';
+        if($product->save())
+        {
+            return back()->with('success_product_deleted','Se ha eliminado exitosamente el producto '.$product->name.'.');
+        }
+        else
+        {
+            return back()->withErrors('No se puedo eliminar el producto seleccionado.');
+        }
     }
 }

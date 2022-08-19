@@ -45,6 +45,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/products', [ProductsController::class,"index"])->middleware('auth')->name('product_index');
     Route::get('/products/add', [ProductsController::class,"create"])->middleware('auth')->name('products_add');
     Route::post('/products/store', [ProductsController::class,"store"])->middleware('auth')->name('products_store');
+    Route::delete('/products/delete/{product}', [ProductsController::class,"destroy"])->middleware('auth')->name('products_delete');
+
 
 
 

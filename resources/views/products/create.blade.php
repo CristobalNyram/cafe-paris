@@ -21,26 +21,37 @@
                         <div class="alert alert-success">{{ session('success') }}</div>
                         @endif
                         @if(session('ERROR'))
-                        <div class="alert alert-danger">{{ session('ERROR') }}</div>
+                        <div class="alert alert-danger">{{ session('error') }}</div>
                         @endif
 
                     <form action="{{ route('products_store')}}" method="POST">
                         @csrf
                             <div class="form-group col-lg-3">
                                 <label for="dia" class="form-control-label">Nombre</label>
-                                <input type="text" class="form-control" name="name" id="name" required>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Nombre del producto" required>
                             </div>
 
 
                             <div class="form-group col-lg-8">
                                 <label for="dia" class="form-control-label">Descripción</label>
-                                <input type="text" class="form-control" name="description" id="description" required>
+                                <input type="text" class="form-control" name="description" id="description" placeholder="Descripción" required>
                             </div>
 
                             <div class="form-group col-lg-4">
-                                <label for="dia" class="form-control-label">Imagen</label>
-                                <input type="file" class="form-control" name="image_url" id="image_url" required>
+                                <label for="dia" class="form-control-label">Categoría</label>
+                                <select class="form-control" name="category" id="category"   data-toggle='select2' required>
+                                    <option value="postres">postres</option>
+
+                                    <option value="cafes">cafes</option>
+                                  </select>
                             </div>
+
+                            <div class="form-group col-lg-4">
+                                <label for="dia" class="form-control-label">Precio</label>
+                                <input type="number" class="form-control" name="price" id="price"  placeholder="Precio ($)" required>
+                            </div>
+
+
                             <div class="form-group col-lg-8">
 
                             </div>

@@ -39,6 +39,10 @@
                           <tr>
                             <th scope="col text-center">Nombre</th>
                             <th scope="col text-center">Descripción</th>
+                            <th scope="col text-center">Categoria</th>
+
+                            <th scope="col text-center">Precio</th>
+
 
                             <th scope="col text-center" style="width: 20%">Acciones</th>
 
@@ -50,6 +54,8 @@
                             <tr>
                                 <td>{{$product->name}}</td>
                                 <td>{{$product->description}}</td>
+                                <td>{{$product->category}}</td>
+                                <td style="text-overflow: ellipsis;">${{$product->price}}</td>
                                 <td  class="d-flex">
                                     <form action="{{route('products_delete',$product)}}" method="POST">
 
@@ -62,7 +68,6 @@
                                             onclick="return confirm('¿Desea eliminar este producto?')" >
                                     </form>
 
-                                    <button type="submit" id="Buscar"  class="btn btn-info">Editar</button>
 
                                 </td>
 

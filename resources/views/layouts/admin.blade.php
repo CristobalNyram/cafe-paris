@@ -63,24 +63,32 @@
                         <i class="ti-dashboard"></i><span> Dashboard</span>
                     </a>
                 </li>
+                @if (auth()->user()->type_user == 1 )
                 <li class="nav-level">--- Usuarios</li>
                 <li class="treeview @if($menu === 'users_index') active @endif">
                     <a class="waves-effect waves-dark" href="{{ route('users_index')}}">
                         <i class="ti-user"></i><span>Usuarios</span>
                     </a>
                 </li>
+                @endif
+
 
                 <li class="nav-level">--- Administración</li>
+                @if (auth()->user()->type_user == 2 )
                 <li class="treeview @if($menu === 'report_online') active @endif">
                     <a class="waves-effect waves-dark" >
                         <i class="ti-shopping-cart"></i><span>Pedidos</span>
                     </a>
                 </li>
+                @endif
+                @if (auth()->user()->type_user == 1 )
                 <li class="treeview @if($menu === 'products_index') active @endif">
                   <a class="waves-effect waves-dark" href="{{ route('product_index')}}">
                       <i class="ti-archive"></i><span>Productos</span>
                   </a>
               </li>
+              @endif
+
 
            </li>
             </ul>
