@@ -75,8 +75,8 @@
 
                 <li class="nav-level">--- Administración</li>
                 @if (auth()->user()->type_user == 2 )
-                <li class="treeview @if($menu === 'report_online') active @endif">
-                    <a class="waves-effect waves-dark" >
+                <li class="treeview @if($menu === 'orders_index') active @endif">
+                    <a class="waves-effect waves-dark" href="{{ route('ordes_index')}}" >
                         <i class="ti-shopping-cart"></i><span>Pedidos</span>
                     </a>
                 </li>

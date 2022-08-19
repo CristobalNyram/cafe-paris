@@ -5,6 +5,9 @@ use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\OrdersController;
+
+
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -46,6 +49,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/products/add', [ProductsController::class,"create"])->middleware('auth')->name('products_add');
     Route::post('/products/store', [ProductsController::class,"store"])->middleware('auth')->name('products_store');
     Route::delete('/products/delete/{product}', [ProductsController::class,"destroy"])->middleware('auth')->name('products_delete');
+
+    Route::get('/orders', [OrdersController::class,"index"])->middleware('auth')->name('ordes_index');
 
 
 
